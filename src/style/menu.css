@@ -86,6 +86,9 @@ justify-content: space-between;
   margin: auto 0;
   transform: scale(2);
 }
+.plus1:hover{
+  transform: scale(2.5);
+}
 
 .container_right {
   width: 40%;

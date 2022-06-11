@@ -16,7 +16,7 @@ const {cantidad} = useSelector((store)=>  store.pedidos)
           <Link to='/menu' className='m-1'><button className='btnNav'> Menu</button></Link>
         </Nav>
         <Link to='/pedidos' className='m-1'>
-          <img width=' 25px' src='https://res.cloudinary.com/edwin3002/image/upload/v1654882739/medallo/cart-removebg-preview_wifet5.png' alt='cart' />
+          <img className='cart' width=' 25px' src='https://res.cloudinary.com/edwin3002/image/upload/v1654882739/medallo/cart-removebg-preview_wifet5.png' alt='cart' />
           <span className='mx-1 text-light'>{cantidad}</span>
           </Link>
       </Container>
