@@ -1,0 +1,165 @@
+/* //pedidos empty*/
+
+.cartEmpty {
+  height: 100vh;
+  padding-top: 100px;
+}
+.contEmpty {
+  background-color: white;
+  border-radius: 50px;
+  width: 50%;
+  display: flex;
+  margin: auto;
+  padding: 20px 0;
+}
+.contEmpty div {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+.btnMenu {
+  margin: 10px auto;
+  width: 100%;
+  background-color: #00c2ff;
+  border-radius: 5px;
+  border: none;
+  color: white;
+}
+.btnMenu:hover {
+  transform: scale(1.05);
+  background-color: #00b3ea;
+}
+.btnPago {
+  font-weight: bold;
+  margin: 10px auto;
+  width: 100%;
+  background-color: #00c2ff;
+  border-radius: 5px;
+  border: none;
+  color: white;
+}
+.btnPago:hover {
+  transform: scale(1.05);
+  background-color: #00b3ea;
+}
+
+@media (max-width: 700px) {
+  .contEmpty {
+    border-radius: 30px;
+    width: 90%;
+    display: flex;
+    margin: auto;
+  }
+}
+/* //pedidos */
+.contPedidos{
+    margin: 50px 0 65px 0;
+}
+.cardCart {
+  width: 60%;
+  background-color: white;
+  margin: 5px auto;
+  border-radius: 50px;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+}
+.namePedidoCart {
+  font-weight: bold;
+  font-size: 30px;
+}
+.son1 {
+  width: 75%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.son2 {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  display: flex;
+  margin: auto 0;
+  position: relative;
+}
+.delete{
+    position: absolute;
+    right: 8%;
+    top: 8%;
+    color: red;
+    transform: scale(1.5);
+}
+.delete:hover{
+    transform: scale(2);
+}
+.imgCart {
+  border-radius: 0 50px 50px 0px;
+  width: 100%;
+  display: flex;
+}
+.minus {
+    color: #0bacdf;
+    margin: auto 20px;
+}
+.plus {
+    color: #29ce8e;
+    margin: auto 20px;
+}
+.plus:hover {
+  color: #20bc80;
+  transform: scale(1.5);
+}
+.minus:hover {
+  color: #0a9fcd;
+  transform: scale(1.5);
+}
+.subT-count {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.subT-count div {
+  display: flex;
+  justify-content: space-around;
+}
+.footCart {
+  font-size: 30px;
+  background: #f3b136;
+  width: 100%;
+  height: 60px;
+  bottom: 0%;
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.btnCancel{
+    position: fixed;
+    display: flex;
+    bottom: 6%
+}
+@media (max-width: 700px) {
+  .cardCart {
+    width: 90%;
+    border-radius: 30px;
+  }
+  .namePedidoCart {
+    font-size: 20px;
+  }
+  .son2 {
+    width: 150px;
+    height: 150px;
+  }
+  .subT-count {
+    flex-direction: column;
+  }
+  .descrip {
+    display: none;
+  }
+
+  .footCart {
+    font-size: 20px;
+  }
+}

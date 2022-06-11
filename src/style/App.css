@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+.App{
+    background-image: url(../img/fondo2.1.jpg);
+    background-attachment: fixed;
+    background-size: 100%;
+    color: whitesmoke;
+    font-family: sans-serif;
+}
+html {
+  background-color: #222233;
+}
+.logo{
+  border-radius: 20px;
+  width: 40px;
+}
+.car{
+  width: 90%;
+  margin: 20px auto;
+  border: 3px solid white;
+  border-radius: 53px;
+}
+.carImg{
+  border-radius: 50px;
+}
+
+/* //footer */
+.footerHead{
+  text-shadow: 2px 2px black;
+}
+
+.list{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+.list-group{
+  text-align: center;
+  margin: 20px auto;
+  width: 75%;
+}
+.list-group div{
+  background: transparent;
+  color: whitesmoke;
+  font-weight: bold;
+}
+.list-group div a{
+  color: whitesmoke;
+}
+@media (min-width: 700px) {
+  .list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .list-group{
+    width: 40%;
+  }
+  .car{
+    width: 60%;
+  }
+}

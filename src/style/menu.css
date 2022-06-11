@@ -1,0 +1,98 @@
+/* menu */
+.divFix {
+  position: relative;
+  display: block;
+  margin: auto;
+  width: 100%;
+  z-index: 10;
+}
+.filterNav {
+  width: 100%;
+  margin: auto;
+  position: fixed;
+  background-color: #f0723a;
+  padding-top: 10px;
+}
+.filterNav div a {
+  font-size: x-small;
+  font-weight: bold;
+  color: white;
+}
+.imgFood {
+  width: 4rem;
+  height: 3rem;
+  display: flex;
+  margin: auto;
+}
+.imgF {
+  width: 100%;
+  object-fit: cover;
+}
+.layout {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.card {
+  background-color: #77bfa3;
+  width: 250px;
+  height: 300px;
+  margin: 10px 5px;
+  border-radius: 20px;
+}
+.cardContent {
+  width: 200px;
+  height: 200px;
+  margin: 10px auto;
+  border-radius: 20px;
+}
+.cardImg {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.foodName{
+  font-size: 20px;
+}
+
+@media (max-width: 700px) {
+  .card {
+    max-width: 175px;
+    max-height: 250px;
+  }
+  .cardContent {
+    width: 150px;
+    height: 150px;
+    margin: 10px auto;
+    border-radius: 20px;
+  }
+  .foodName{
+    font-size: 15px;
+  }
+  .layout {
+    margin-top: 80px;
+  }
+}
+.namePlus{
+margin: auto 20px;
+display: flex;
+justify-content: space-between;
+}
+.plus1{
+  color: #00f2ff;
+  margin: auto 0;
+  transform: scale(2);
+}
+
+.container_right {
+  width: 40%;
+}
+.container_left {
+  width: 60%;
+}
+small {
+  font-size: 1.5rem;
+}
