@@ -10,6 +10,16 @@ export const Pedidos = () => {
   const dispatch = useDispatch();
   const { pedidosItems, cantidad, total } = useSelector((store) => store.pedidos)
 
+  const plus = (id) => {
+    dispatch(aumentarPedido({ id }));
+  }
+  const minus = (id, cant) => {
+    if (cant === 1) {
+      dispatch(removerPedido(id));
+    }else{
+      dispatch(disminuirPedido({ id }));
+    }
+  }
   const cancelar = () => {
     dispatch(vaciarPedido())
     Swal.fire({
@@ -18,7 +28,8 @@ export const Pedidos = () => {
       title: 'Pedido Cancelado',
       showConfirmButton: false,
       timer: 1500
-    })
+    });
+    localStorage.setItem('cart', JSON.stringify(''));
   }
   const remover = (id) => {
     dispatch(removerPedido(id))
@@ -28,7 +39,7 @@ export const Pedidos = () => {
       title: 'Producto Removido',
       showConfirmButton: false,
       timer: 1500
-    })
+    });
   }
   if (cantidad < 1) {
     return (
@@ -62,19 +73,13 @@ export const Pedidos = () => {
                 <div className='subT-count'>
                   <div>
                     <span className='minus' >
-                      <span onClick={() => {
-                        if (cantidad === 1) {
-                          dispatch(removerPedido(id));
-                          return
-                        }
-                        dispatch(disminuirPedido({ id }))
-                      }}>
+                      <span onClick={() => minus(id, cantidad)}>
                         <Minus />
                       </span>
                     </span>
                     <span>{cantidad}</span>
                     <span className='plus' >
-                      <span onClick={() => dispatch(aumentarPedido({ id }))}>
+                      <span onClick={() => plus(id)}>
                         <Plus />
                       </span>
                     </span>
@@ -85,7 +90,7 @@ export const Pedidos = () => {
                 </div>
               </div>
               <div className='son2'>
-                <p className='delete' onClick={() => remover(id)}><XFill/></p>
+                <p className='delete' onClick={() => remover(id)}><XFill /></p>
                 <img className='imgCart' src={img} alt='food' />
               </div>
             </div>

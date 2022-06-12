@@ -42,6 +42,7 @@ export const PagoCart = () => {
       })
       setTimeout(() => {
         dispatch(vaciarPedido());
+        localStorage.setItem('cart', JSON.stringify(''));
         navigate('/');
       }, 2000);
     }

@@ -1,21 +1,18 @@
+
 import { useDispatch } from 'react-redux';
-import Swal from 'sweetalert2';
+import { addItemCart } from '../helpers/cartLocalStorage';
 import { PlusFill } from '../icons/icons'
 import { agregarPedido } from '../redux/reducers/pedidosReducer';
 
 export const CardsMenu = ({ value }) => {
     const dispatch = useDispatch();
 
-    const add = (f) => {
-        dispatch(agregarPedido(f))
-        Swal.fire({
-            position: 'top-end',
-            icon: 'success',
-            title: 'Producto agregado',
-            showConfirmButton: false,
-            timer: 1500
-        })
+    const add = (item) => {
+        dispatch(agregarPedido(item));
+        addItemCart(item);
     }
+
+    
     return (
 
         <div className='card'>

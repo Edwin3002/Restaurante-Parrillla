@@ -1,18 +1,27 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Nav } from 'react-bootstrap'
 import { menu } from '../data/menu'
+import { createLocalS } from '../helpers/cartLocalStorage'
 import '../style/menu.css'
 import { CardsMenu } from './CardsMenu'
 
 
 export const Menu = () => {
+
   const [menuFood, setMenuFood] = useState(menu);
-
-
 
   const filterFood = (filt) => {
     setMenuFood(menu.filter((menuFilter) => menuFilter.categoria === filt))
   }
+
+
+
+  useEffect(() => {
+    createLocalS()
+  }, [])
+
+
+
   return (
     <div className='mt-5 pt-2' >
       <div className='divFix'>
