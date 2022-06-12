@@ -7,21 +7,28 @@ export const CarouselC = () => {
             <Carousel.Item c>
                 <img
                     className="d-block w-100 carImg"
-                    src="https://res.cloudinary.com/edwin3002/image/upload/v1654873981/medallo/frutas_twfggf.jpg"
+                    src="https://res.cloudinary.com/edwin3002/image/upload/v1655012505/restaurant/c3_2_uvposy.jpg"
                     alt="First slide"
                 />
             </Carousel.Item>
             <Carousel.Item>
                 <img
                     className="d-block w-100 carImg" 
-                    src="https://res.cloudinary.com/edwin3002/image/upload/v1654873982/medallo/frutas2_hqpxgb.webp"
+                    src="https://res.cloudinary.com/edwin3002/image/upload/v1655012506/restaurant/c1_2_vdghfs.jpg"
                     alt="Second slide"
                 />
             </Carousel.Item>
             <Carousel.Item>
                 <img
                     className="d-block w-100 carImg"
-                    src="https://res.cloudinary.com/edwin3002/image/upload/v1654873983/medallo/frutas3_meao5r.png"
+                    src="https://res.cloudinary.com/edwin3002/image/upload/v1655012508/restaurant/c2_2_jyymef.jpg"
+                    alt="Third slide"
+                />
+            </Carousel.Item>
+            <Carousel.Item>
+                <img
+                    className="d-block w-100 carImg"
+                    src="https://res.cloudinary.com/edwin3002/image/upload/v1655012515/restaurant/car2_2_ueyqik.jpg"
                     alt="Third slide"
                 />
             </Carousel.Item>
