@@ -21,7 +21,7 @@ export const PagoCart = () => {
       cantidad: cantidad,
     }
   )
-  const { nombre, mesa } = cliente
+  const { nombre, mesa, hora } = cliente
 
   const pagar = () => {
     if (nombre.length === 0 || mesa === 0 || mesa === 0) {
@@ -39,7 +39,7 @@ export const PagoCart = () => {
         ,
         cliente
       }
-      dispatch(addPedidosAsync(pedido))
+      dispatch(addPedidosAsync(pedido));
       Swal.fire({
         position: 'top-end',
         icon: 'success',
@@ -72,10 +72,10 @@ export const PagoCart = () => {
           <Form.Label>Numero de mesa</Form.Label>
           <Form.Control max='100' min='1' type="number" placeholder="Americano 61" name='mesa' value={mesa} onChange={handleChange} />
         </Form.Group>
-        {/* <Form.Group className="mb-3 " >
-          <Form.Label>Hora del pedido</Form.Label>
-          <Form.Control type="time" placeholder="Hora del pedido" name='hora' value={hora} onChange={handleChange} autoComplete />
-        </Form.Group> */}
+        <Form.Group className="mb-3" >
+          <Form.Label>Hora</Form.Label>
+          <Form.Control type="text" name='hora' value={hora} disabled />
+        </Form.Group>
         <Button variant="success" onClick={() => pagar()}>
           Pedir
         </Button>

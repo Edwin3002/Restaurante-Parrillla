@@ -15,7 +15,7 @@ export const paintPedidosAsync = () => {
                 ...pedi.data(),
             });
         });
-        console.log(pedidos);
+        return pedidos;
     };
 };
 

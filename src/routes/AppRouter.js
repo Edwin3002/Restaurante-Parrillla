@@ -21,8 +21,8 @@ export function AppRoutes() {
 		<BrowserRouter>
 			<Navb />
 			<Routes>
-				<Route path='/menu' element={<Menu />} />
 				<Route path='/' element={<Home />} />
+				<Route path='/menu' element={<Menu />} />
 				<Route path='/carrito' element={<Carrito />} />
 				<Route path='/pedidos' element={<PagoCart />} />
 				<Route path='/ventas' element={<Ventas />} />
