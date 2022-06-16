@@ -3,7 +3,8 @@ import { Accordion, Form } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
 import { paintPedidosAsync } from '../redux/actions/actionsPedidos'
 import '../style/ventas.css'
-
+import clock from '../icons/clock1.png';
+import table from '../icons/table.png';
 export const Ventas = () => {
     const dispatch = useDispatch();
     const [sales, setSales] = useState([]);
@@ -39,9 +40,11 @@ export const Ventas = () => {
                                         {venta.cliente.nombre}
                                     </div>
                                     <div>
+                                        <img src={clock} alt='clock'/>
                                         {venta.cliente.hora}
                                     </div>
                                     <div>
+                                    <img src={table} alt='table'/>
                                         {venta.cliente.mesa}
                                     </div>
                                     <div>
@@ -61,12 +64,10 @@ export const Ventas = () => {
                                             {item.nombre}
                                         </div>
                                         <div className='cardContentSales'>
-                                            {/* <span  */}
                                             <img className='cardImgSales' width='50px' src={item.img} alt={item.nombre} />
-                                            {/* </span> */}
                                         </div>
                                         <div>
-                                            {item.cantidad}
+                                            cant: {item.cantidad}
                                         </div>
                                         <div>
                                             {Intl.NumberFormat('de-DE').format(item.precio)}
