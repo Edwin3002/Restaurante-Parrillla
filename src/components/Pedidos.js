@@ -85,7 +85,7 @@ export const Pedidos = () => {
                     </span>
                   </div>
                   <div>
-                    <strong>SubTotal: </strong> {precio}
+                    <strong>SubTotal: </strong> {Intl.NumberFormat('de-DE').format(precio)}
                   </div>
                 </div>
               </div>
@@ -101,7 +101,7 @@ export const Pedidos = () => {
       </div>
       <div className='footCart'>
         <div>
-          <strong>Total: </strong> {total}
+          <strong>Total: </strong> {Intl.NumberFormat('de-DE').format(total)}
         </div>
         <div>
           <Link to='/pago'>

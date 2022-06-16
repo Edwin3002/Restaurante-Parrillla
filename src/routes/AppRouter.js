@@ -6,6 +6,7 @@ import { Menu } from '../components/Menu'
 import { Navb } from '../components/Navb'
 import { PagoCart } from '../components/PagoCart'
 import { Pedidos } from '../components/Pedidos'
+import { Ventas } from '../components/Ventas'
 import { totalPedido } from '../redux/reducers/pedidosReducer'
 
 export function AppRoutes() {
@@ -24,6 +25,7 @@ export function AppRoutes() {
 				<Route path='/menu' element={<Menu />} />
 				<Route path='/pedidos' element={<Pedidos />} />
 				<Route path='/pago' element={<PagoCart />} />
+				<Route path='/ventas' element={<Ventas />} />
 			</Routes>
 		</BrowserRouter>
 	)

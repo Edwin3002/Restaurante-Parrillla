@@ -6,14 +6,13 @@ import { getFirestore } from 'firebase/firestore';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyDte6L5uQee0unQwuWflhFuOFPpIr5gF7A",
-    authDomain: "medallo-hackthon.firebaseapp.com",
-    projectId: "medallo-hackthon",
-    storageBucket: "medallo-hackthon.appspot.com",
-    messagingSenderId: "598447598682",
-    appId: "1:598447598682:web:2b9e2d049413da6b573c63",
-    measurementId: "G-MGZE90PSFZ"
-};
+    apiKey: "AIzaSyAwBMTP6M5ZDes7k0A2hc7Xi3w_4RYF-D0",
+    authDomain: "restaurante-e3b67.firebaseapp.com",
+    projectId: "restaurante-e3b67",
+    storageBucket: "restaurante-e3b67.appspot.com",
+    messagingSenderId: "731309522791",
+    appId: "1:731309522791:web:d9817dd36576c91282b9c2"
+  };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

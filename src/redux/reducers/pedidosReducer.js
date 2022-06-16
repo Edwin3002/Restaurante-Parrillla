@@ -41,7 +41,6 @@ const pedidosReducer = createSlice({
         },
         agregarPedidoLocalS: (state, action) => {
             const pedItem = action.payload;
-            console.log(pedItem);
             state.pedidosItems = pedItem
         },
         removerPedido: (state, action) => {
