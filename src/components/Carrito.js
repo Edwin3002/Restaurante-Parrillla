@@ -1,14 +1,19 @@
-import { Button } from 'react-bootstrap'
+import { Button, Modal } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
-import '../style/pedidos.css'
+import '../style/carrito.css'
 import { Minus, Plus, XFill } from '../icons/icons'
 import { aumentarPedido, disminuirPedido, removerPedido, vaciarPedido } from '../redux/reducers/pedidosReducer'
 import Swal from 'sweetalert2'
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 
-export const Pedidos = () => {
+export const Carrito = () => {
   const dispatch = useDispatch();
   const { pedidosItems, cantidad, total } = useSelector((store) => store.pedidos)
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   const plus = (id) => {
     dispatch(aumentarPedido({ id }));
@@ -16,7 +21,7 @@ export const Pedidos = () => {
   const minus = (id, cant) => {
     if (cant === 1) {
       dispatch(removerPedido(id));
-    }else{
+    } else {
       dispatch(disminuirPedido({ id }));
     }
   }
@@ -97,18 +102,32 @@ export const Pedidos = () => {
           )
         })}
       <div className='btnCancel'>
-        <Button variant='danger' className='my-2' onClick={() => { cancelar() }}>Cancelar</Button>
+        <Button variant='danger' className='mx-1 my-4' onClick={handleShow}>X</Button>
       </div>
       <div className='footCart'>
         <div>
           <strong>Total: </strong> {Intl.NumberFormat('de-DE').format(total)}
         </div>
         <div>
-          <Link to='/pago'>
+          <Link to='/pedidos'>
             <button className='btnPago '>Realizar pedido</button>
           </Link>
         </div>
       </div>
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Parrilla Campestre </Modal.Title>
+        </Modal.Header>
+
+        <Modal.Body>
+          <p className='text-center'>¿Desea eliminar los productos del carrito?</p>
+          <div className='d-flex '>
+
+            <Button variant='danger' className='d-flex mx-auto my-4' onClick={() => { cancelar() }}>Si</Button>
+            <Button variant='success' className='d-flex mx-auto my-4' onClick={handleClose}>No</Button>
+          </div>
+        </Modal.Body>
+      </Modal>
     </div >
 
   )

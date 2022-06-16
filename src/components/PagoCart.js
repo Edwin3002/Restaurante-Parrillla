@@ -35,17 +35,15 @@ export const PagoCart = () => {
     } else {
       cliente.mesa = parseInt(mesa);
       let pedido = {
-         pedidosItems 
+        pedidosItems
         ,
-         cliente 
+        cliente
       }
-      console.log({ pedido });
-      console.log(pedido);
       dispatch(addPedidosAsync(pedido))
       Swal.fire({
         position: 'top-end',
         icon: 'success',
-        title: 'Pedido realizaod exitosamente',
+        title: 'Pedido realizado exitosamente',
         showConfirmButton: false,
         timer: 2000
       })
@@ -64,7 +62,7 @@ export const PagoCart = () => {
   }
   return (
     <div className='mt-5 pt-5 m-auto w-75'>
-      <h1 className='text-center fw-bold'>Realizar pedido a cocina</h1>
+      <h1 className='text-center fw-bold'>Realizar pedido</h1>
       <Form>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Nombre</Form.Label>
