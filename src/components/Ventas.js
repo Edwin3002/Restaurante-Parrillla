@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Accordion, Form } from 'react-bootstrap';
+import { Accordion, Form, InputGroup } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
 import { paintPedidosAsync } from '../redux/actions/actionsPedidos'
 import '../style/ventas.css'
@@ -8,31 +8,42 @@ import table from '../icons/table.png';
 export const Ventas = () => {
     const dispatch = useDispatch();
     const [sales, setSales] = useState([]);
-
+    const [datos, setDatos] = useState([]);
+    const [filt, setFilt] = useState('')
+    const { nombre } = filt;
     const getDataVenta = async () => {
         setSales(await dispatch(paintPedidosAsync()));
-        // sales.map((venta)=>{
-        //     console.log(venta.cliente);
-        //     console.log(venta.pedidosItems);
-        // })
+        setDatos(await dispatch(paintPedidosAsync()));
+    }
+    const filtro = () => {
+        setSales(datos)
+        setFilt({nombre: ''})
+    }
+    const handleChange = ({ target }) => {
+        setFilt(target.value);
+        if (filt.length <= 1) {
+            setSales(datos)
+        } else {
+            setSales(datos.filter(pedido => pedido.cliente.nombre.toLowerCase().includes(filt.toLowerCase())))
+        }
     }
     useEffect(() => {
         getDataVenta();
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
-    if (sales === '') {
-        return (
-
-            <div>hola</div>
-        )
-    }
 
     return (
         <div className='father'>
             <h2 className='m-auto text-center fw-bold'>Ventas</h2>
+            <Form>
+            <InputGroup className="mb-3">
+                    <Form.Control type="text" placeholder="Nombre" name='nombre' value={nombre} onChange={handleChange} />
+                    <InputGroup.Text className='bg-primary' onClick={() => filtro()}>X</InputGroup.Text>
+                </InputGroup>
+            </Form>
             <Accordion >
                 {
-                    sales.slice(0, 10).map((venta, index) => (
+                    sales.map((venta, index) => (
                         <Accordion.Item key={index} eventKey={index}>
                             <div className='d-flex'>
                                 <Accordion.Header className='accorH '>
@@ -40,11 +51,11 @@ export const Ventas = () => {
                                         {venta.cliente.nombre}
                                     </div>
                                     <div>
-                                        <img src={clock} alt='clock'/>
+                                        <img src={clock} alt='clock' />
                                         {venta.cliente.hora}
                                     </div>
                                     <div>
-                                    <img src={table} alt='table'/>
+                                        <img src={table} alt='table' />
                                         {venta.cliente.mesa}
                                     </div>
                                     <div>
@@ -53,7 +64,7 @@ export const Ventas = () => {
                                 </Accordion.Header>
                                 <div className='check-btn'>
                                     <Form >
-                                        <Form.Check  type="checkbox" />
+                                        <Form.Check type="checkbox" />
                                     </Form>
                                 </div>
                             </div>

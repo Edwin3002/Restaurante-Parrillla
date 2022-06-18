@@ -4,18 +4,26 @@ import { menu } from '../data/menu'
 import { createLocalS } from '../helpers/cartLocalStorage'
 import '../style/menu.css'
 import { CardsMenu } from './CardsMenu'
+import { ModalDescrip } from './ModalDescrip'
 
 
 export const Menu = () => {
 
   const [menuFood, setMenuFood] = useState(menu);
+  const [showModal, setShowModal] = useState(false);
+  const [infoModal, setInfoModal] = useState([])
 
   const filterFood = (filt) => {
     setMenuFood(menu.filter((menuFilter) => menuFilter.categoria === filt))
   }
 
 
-
+  const openModal = () =>{
+    setShowModal(!showModal)
+  }
+  const infoM = (v) =>{
+    setInfoModal(v);
+  }
   useEffect(() => {
     createLocalS()
   }, [])
@@ -56,10 +64,10 @@ export const Menu = () => {
       <section className="layout">
         {
           menuFood.map((food) => (
-            <CardsMenu key={food.id} value={food} />
+            <CardsMenu key={food.id} value={food} modal={openModal} info={infoM}/>
           ))}
       </section>
-
+            <ModalDescrip open={showModal} set={openModal} info={infoModal}/>
     </div>
   )
 }

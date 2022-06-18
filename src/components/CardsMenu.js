@@ -4,20 +4,18 @@ import { addItemCart } from '../helpers/cartLocalStorage';
 import { PlusFill } from '../icons/icons'
 import { agregarPedido } from '../redux/reducers/pedidosReducer';
 
-export const CardsMenu = ({ value }) => {
+export const CardsMenu = ({ value, modal, info }) => {
     const dispatch = useDispatch();
 
     const add = (item) => {
         dispatch(agregarPedido(item));
         addItemCart(item);
     }
-
-    
     return (
 
         <div className='card'>
             <div className='cardContent'>
-                <img className='cardImg' src={value.img} alt='food' />
+                <img className='cardImg' src={value.img} alt='food' onClick={()=>{modal(); info(value)}}/>
             </div>
             <div className='namePlus'>
                 <span className='foodName'>{value.nombre}</span>
