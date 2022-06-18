@@ -62,11 +62,11 @@ export const Ventas = () => {
                                         ${Intl.NumberFormat('de-DE').format(venta.cliente.total)}
                                     </div>
                                 </Accordion.Header>
-                                <div className='check-btn'>
+                                {/* <div className='check-btn'>
                                     <Form >
                                         <Form.Check type="checkbox" />
                                     </Form>
-                                </div>
+                                </div> */}
                             </div>
                             <Accordion.Body>
                                 {venta.pedidosItems.map((item, index) => (

@@ -14,6 +14,7 @@ const {cantidad} = useSelector((store)=>  store.pedidos)
         <Nav className="me-auto">
           <Link to='/' className='m-1'><button className='btnNav'>Home</button></Link>
           <Link to='/menu' className='m-1'><button className='btnNav'> Menu</button></Link>
+          <Link to='/ventas' className='m-1'><button className='btnNav'> Ventas</button></Link>
         </Nav>
         <Link to='/carrito' className='m-1'>
           <img className='cart' width=' 25px' src='https://res.cloudinary.com/edwin3002/image/upload/v1654882739/medallo/cart-removebg-preview_wifet5.png' alt='cart' />
