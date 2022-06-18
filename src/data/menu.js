@@ -6,7 +6,8 @@ export const menu = [
         "img": "https://www.recetasderechupete.com/wp-content/uploads/2016/11/Solomillo-wellington-768x527.jpg",
         "precio": 15000,
         "cantidad": 1,
-        "categoria": "carnes"
+        "categoria": "carnes",
+        "tiempo": 1
     },
     {
         "id": 2,
@@ -15,7 +16,8 @@ export const menu = [
         "img": "https://www.recetasderechupete.com/wp-content/uploads/2018/09/Carne-asada-en-cazuela-768x510.jpg",
         "precio": 17500,
         "cantidad": 1,
-        "categoria": "carnes"
+        "categoria": "carnes",
+        "tiempo": 2
     },
     {
         "id": 3,
@@ -24,7 +26,8 @@ export const menu = [
         "img": "https://www.recetasderechupete.com/wp-content/uploads/2015/05/albondigas_suecas_ikea.jpg",
         "precio": 20000,
         "cantidad": 1,
-        "categoria": "carnes"
+        "categoria": "carnes",
+        "tiempo": 3
     },
     {
         "id": 4,
@@ -33,7 +36,8 @@ export const menu = [
         "img": "https://www.recetasderechupete.com/wp-content/uploads/2013/08/filetes_rusos_tomate.jpg",
         "precio": 24900,
         "cantidad": 1,
-        "categoria": "carnes"
+        "categoria": "carnes",
+        "tiempo": 4
     },
     {
         "id": 5,
@@ -42,7 +46,8 @@ export const menu = [
         "img": "https://www.recetasderechupete.com/wp-content/uploads/2014/03/salsa_bolognesa.jpg",
         "precio": 24900,
         "cantidad": 1,
-        "categoria": "carnes"
+        "categoria": "carnes",
+        "tiempo": 5
     },
     {
         "id": 6,
@@ -51,7 +56,8 @@ export const menu = [
         "img": "https://th.bing.com/th/id/R.a34ba52382b4d6f93052ac810da32461?rik=oQZWvZrU0qavXw&pid=ImgRaw&r=0",
         "precio": 10000,
         "cantidad": 1,
-        "categoria": "bebidas"
+        "categoria": "bebidas",
+        "tiempo": 1
     },
     {
         "id": 7,
@@ -60,7 +66,8 @@ export const menu = [
         "img": "https://th.bing.com/th/id/R.2205a5e40b70479f96863e30dfa76ef4?rik=r%2bvN3LRadsxNRg&pid=ImgRaw&r=0",
         "precio": 10000,
         "cantidad": 1,
-        "categoria": "bebidas"
+        "categoria": "bebidas",
+        "tiempo": 2
     },
     {
         "id": 8,
@@ -69,7 +76,8 @@ export const menu = [
         "img": "https://th.bing.com/th/id/OIP.TeCyrTHmuRLs34H5nKEi5wHaG8?pid=ImgDet&rs=1",
         "precio": 10000,
         "cantidad": 1,
-        "categoria": "bebidas"
+        "categoria": "bebidas",
+        "tiempo": 3
     },
     {
         "id": 9,
@@ -78,7 +86,8 @@ export const menu = [
         "img": "https://i.pinimg.com/originals/67/d0/cf/67d0cf1ec42f70c69de6fc7632940925.jpg",
         "precio": 10000,
         "cantidad": 1,
-        "categoria": "bebidas"
+        "categoria": "bebidas",
+        "tiempo": 4
     },
     {
         "id": 10,
@@ -87,7 +96,8 @@ export const menu = [
         "img": "https://th.bing.com/th/id/R.75929ce64df85918bae8d04e0f41ec84?rik=5u56W%2feDtF%2fVTg&riu=http%3a%2f%2fmundoamores.com%2fwp-content%2fuploads%2f2015%2f10%2fjugos.jpg&ehk=ERlOseNJlLYGgSNJrD8btJDCC%2bZG3qlRu7YmvJc5ylM%3d&risl=&pid=ImgRaw&r=0",
         "precio": 10000,
         "cantidad": 1,
-        "categoria": "bebidas"
+        "categoria": "bebidas",
+        "tiempo": 5
     },
     {
         "id": 11,
@@ -96,7 +106,8 @@ export const menu = [
         "img": "https://i.blogs.es/344fba/tarta-red-velvet/1024_2000.jpg",
         "precio": 25900,
         "cantidad": 1,
-        "categoria": "postres"
+        "categoria": "postres",
+        "tiempo": 1
     },
     {
         "id": 12,
@@ -105,7 +116,8 @@ export const menu = [
         "img": "https://i.blogs.es/d2016d/bizcocho-saludable-chocolate-110219-0001/1024_2000.jpg",
         "precio": 27000,
         "cantidad": 1,
-        "categoria": "postres"
+        "categoria": "postres",
+        "tiempo": 2
     },
     {
         "id": 13,
@@ -114,7 +126,8 @@ export const menu = [
         "img": "https://content-cocina.lecturas.com/medio/2018/07/19/brazo-de-gitano-con-dulce-de-leche_f3c52a8a_800x800.jpg",
         "precio": 23000,
         "cantidad": 1,
-        "categoria": "postres"
+        "categoria": "postres",
+        "tiempo": 3
     },
     {
         "id": 14,
@@ -123,7 +136,8 @@ export const menu = [
         "img": "https://content-cocina.lecturas.com/medio/2018/07/19/coulants-de-chocolate_229eb7ae_800x800.jpg",
         "precio": 17000,
         "cantidad": 1,
-        "categoria": "postres"
+        "categoria": "postres",
+        "tiempo": 4
     },
     {
         "id": 15,
@@ -132,7 +146,8 @@ export const menu = [
         "img": "https://content-cocina.lecturas.com/medio/2018/07/19/tarta-de-manzana-rellena_8bdd481e_800x800.jpg",
         "precio": 26000,
         "cantidad": 1,
-        "categoria": "postres"
+        "categoria": "postres",
+        "tiempo": 5
     },
     {
         "id": 16,
@@ -141,7 +156,8 @@ export const menu = [
         "img": "https://th.bing.com/th/id/OIP.MF6DallLfjCvA7JeOCioCQHaFj?pid=ImgDet&rs=1",
         "precio": 15000,
         "cantidad": 1,
-        "categoria": "comidas_rapidas"
+        "categoria": "comidas_rapidas",
+        "tiempo": 1
     },
     {
         "id": 17,
@@ -150,7 +166,8 @@ export const menu = [
         "img": "https://diana.sv/wp-content/uploads/2020/07/hamburguesajalapena.jpg",
         "precio": 17000,
         "cantidad": 1,
-        "categoria": "comidas_rapidas"
+        "categoria": "comidas_rapidas",
+        "tiempo": 2
     },
     {
         "id": 18,
@@ -159,7 +176,8 @@ export const menu = [
         "img": "https://restauracionnews.com/wp-content/uploads/2019/02/TacoBellL.jpg",
         "precio": 18900,
         "cantidad": 1,
-        "categoria": "comidas_rapidas"
+        "categoria": "comidas_rapidas",
+        "tiempo": 3
     },
     {
         "id": 19,
@@ -168,7 +186,8 @@ export const menu = [
         "img": "https://th.bing.com/th/id/R.8a9892982d69b5ab2c339073fdd037ed?rik=c4uU7Fk6X5vCLw&pid=ImgRaw&r=0 ",
         "precio": 10000,
         "cantidad": 1,
-        "categoria": "comidas_rapidas"
+        "categoria": "comidas_rapidas",
+        "tiempo": 4
     },
     {
         "id": 20,
@@ -177,6 +196,7 @@ export const menu = [
         "img": "https://cdn.colombia.com/gastronomia/2015/08/31/burrito-de-carne-3236.jpg",
         "precio": 13500,
         "cantidad": 1,
-        "categoria": "comidas_rapidas"
+        "categoria": "comidas_rapidas",
+        "tiempo": 5
     }
 ]

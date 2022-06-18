@@ -1,0 +1,25 @@
+.mHeader {
+  background-color: #77bfa3 !important;
+}
+.m {
+  background-color: #77bfa3 !important;
+}
+.modalBody {
+  background-color: white;
+  border-radius: 20px;
+}
+.fire {
+  filter: grayscale(1);
+  width: 50px;
+}
+.n{
+    width: 50px;
+}
+@media (max-width: 700px) {
+    .fire {
+      width: 20px;
+    }
+    .n{
+        width: 20px;
+    }
+}

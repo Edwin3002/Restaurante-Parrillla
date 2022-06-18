@@ -53,8 +53,8 @@
   }
 }
 /* //pedidos */
-.contPedidos{
-    margin: 50px 0 65px 0;
+.contPedidos {
+  margin: 50px 0 65px 0;
 }
 .cardCart {
   width: 60%;
@@ -84,15 +84,27 @@
   margin: auto 0;
   position: relative;
 }
-.delete{
-    position: absolute;
-    right: 8%;
-    top: 8%;
-    color: red;
-    transform: scale(1.5);
+.delete {
+  position: absolute;
+  right: 8%;
+  top: 8%;
+  color: red;
+  transform: scale(1.5);
 }
-.delete:hover{
-    transform: scale(2);
+.modal-header {
+  flex-direction: row-reverse;
+  padding: 10px;
+}
+.delete2 {
+  margin: 0;
+  color: red;
+  transform: scale(1.5);
+}
+.delete:hover {
+  transform: scale(2);
+}
+.delete2:hover {
+  transform: scale(2);
 }
 .imgCart {
   border-radius: 0 50px 50px 0px;
@@ -100,12 +112,12 @@
   display: flex;
 }
 .minus {
-    color: #0bacdf;
-    margin: auto 20px;
+  color: #0bacdf;
+  margin: auto 20px;
 }
 .plus {
-    color: #29ce8e;
-    margin: auto 20px;
+  color: #29ce8e;
+  margin: auto 20px;
 }
 .plus:hover {
   color: #20bc80;
@@ -135,10 +147,10 @@
   justify-content: space-around;
   align-items: center;
 }
-.btnCancel{
-    position: fixed;
-    display: flex;
-    bottom: 6%
+.btnCancel {
+  position: fixed;
+  display: flex;
+  bottom: 6%;
 }
 @media (max-width: 700px) {
   .cardCart {
